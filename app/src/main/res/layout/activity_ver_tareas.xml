@@ -12,37 +12,39 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/amatica_sc_bold"
         android:text="Ver Tareas"
+        android:textColor="#BD7DF9"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="113dp"
-        android:layout_height="76dp"
+        android:layout_width="94dp"
+        android:layout_height="58dp"
         android:rotation="14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.049"
         app:srcCompat="@mipmap/tareas" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="83dp"
-        android:layout_height="76dp"
+        android:layout_width="72dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.049"
         app:srcCompat="@mipmap/entrega" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -53,6 +55,7 @@
         android:layout_marginLeft="355dp"
         android:layout_marginTop="583dp"
         android:clickable="true"
+        app:backgroundTint="#63D4FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
