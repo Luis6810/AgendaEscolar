@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgendaEscolar">
-        <activity android:name=".VerTareas"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".VerTareas"
             android:label="@string/app_name"
             android:theme="@style/Theme.AgendaEscolar.NoActionBar">
             <intent-filter>
