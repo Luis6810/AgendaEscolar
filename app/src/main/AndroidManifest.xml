@@ -11,6 +11,11 @@
         android:theme="@style/Theme.AgendaEscolar">
         <activity android:name=".CrearPeriodo"></activity>
         <activity android:name=".VerTareas" />
+
+        <activity android:name=".EditarTarea"></activity>
+
+        <activity android:name=".VerTareas"></activity>
+
         <activity android:name=".crear_tarea" />
         <activity
             android:name=".MainActivity"
