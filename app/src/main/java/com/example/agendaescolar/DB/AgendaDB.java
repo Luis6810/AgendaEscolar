@@ -26,7 +26,6 @@ public class AgendaDB extends SQLiteOpenHelper {
                 "materia varchar NOT NULL,"+
                 "descripcion varchar NOT NULL,"+
                 "fecha varchar NOT NULL,"+
-                "periodo varchar NOT NULL,"+
                 "hora varchar NOT NULL)"
         );
 

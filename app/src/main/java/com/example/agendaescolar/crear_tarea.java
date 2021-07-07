@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import java.util.Calendar;
 
 public class crear_tarea extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnHora, btnFecha,btnSave;
+    Button btnHora, btnFecha,btnSave,btnCancell;
     EditText editHora, editFecha, etNombre,etMateria,etDescripcion;
     private int dia,mes,año,hora,minutos;
 
@@ -28,6 +29,7 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_crear_tarea);
 
         btnSave=(Button) findViewById(R.id.btnSave);
+        btnCancell=(Button) findViewById(R.id.btnCancell);
         btnFecha=(Button) findViewById(R.id.btnFecha);
         btnHora=(Button) findViewById(R.id.btnHora);
         editFecha=(EditText) findViewById(R.id.editFecha);
@@ -50,8 +52,16 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
                 Toast.makeText(crear_tarea.this,"Tarea creada correctamente" + id, Toast.LENGTH_LONG).show();
             }
         });
+/*
+        btnCancell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), back);
+                startActivityForResult(intent, 0);
+            }
+        });
 
-
+*/
 
 
 

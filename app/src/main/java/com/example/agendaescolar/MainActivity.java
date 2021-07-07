@@ -36,5 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+
+        Button periodos = findViewById(R.id.btnPeriodos2);
+        periodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CrearPeriodo.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 }
