@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".crear_tarea">
@@ -79,7 +80,7 @@
         app:layout_constraintVertical_bias="0.523" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -93,7 +94,7 @@
         app:layout_constraintVertical_bias="0.346" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etMateria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -107,7 +108,7 @@
         app:layout_constraintVertical_bias="0.432" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/etDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -122,7 +123,7 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCancell"
         android:layout_width="127dp"
         android:layout_height="45dp"
         android:fontFamily="@font/amatica_sc_bold"
@@ -137,7 +138,7 @@
         app:layout_constraintVertical_bias="0.853" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSave"
         android:layout_width="127dp"
         android:layout_height="45dp"
         android:fontFamily="@font/amatica_sc_bold"

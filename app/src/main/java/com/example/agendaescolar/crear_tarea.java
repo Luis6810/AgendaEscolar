@@ -10,13 +10,16 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
+
+import com.example.agendaescolar.DB.dbTareas;
 
 import java.util.Calendar;
 
 public class crear_tarea extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnHora, btnFecha;
-    EditText editHora, editFecha;
+    Button btnHora, btnFecha,btnSave;
+    EditText editHora, editFecha, etNombre,etMateria,etDescripcion;
     private int dia,mes,año,hora,minutos;
 
     @Override
@@ -24,12 +27,33 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_tarea);
 
+        btnSave=(Button) findViewById(R.id.btnSave);
         btnFecha=(Button) findViewById(R.id.btnFecha);
         btnHora=(Button) findViewById(R.id.btnHora);
         editFecha=(EditText) findViewById(R.id.editFecha);
         editHora=(EditText) findViewById(R.id.editHora);
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
+
+
+        //Añadir tarea a la base de datos
+        etNombre=(EditText) findViewById(R.id.etNombre);
+        etMateria=(EditText) findViewById(R.id.etMateria);
+        etDescripcion=(EditText) findViewById(R.id.etDescripcion);
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbTareas dbTarea = new dbTareas(crear_tarea.this);
+                long id = dbTarea.insertarTarea(etNombre.getText().toString(), etMateria.getText().toString(), etDescripcion.getText().toString(),editHora.getText().toString(),editFecha.getText().toString());
+
+                Toast.makeText(crear_tarea.this,"Tarea creada correctamente" + id, Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+
 
     }
 
