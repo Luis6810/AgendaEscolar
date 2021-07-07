@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgendaEscolar">
+        <activity android:name=".VerPeriodos"></activity>
+        <activity android:name=".VerTareas" />
         <activity android:name=".CrearPeriodo"></activity>
         <activity android:name=".VerTareas" />
 
