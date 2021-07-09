@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/cardview_shadow_start_color"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:id="@+id/viewNombrePeriodo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:layout_conversion_absoluteHeight="45dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
 
         <TextView
             android:id="@+id/viewFecha"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_conversion_absoluteHeight="30dp"
+            tools:layout_editor_absoluteY="45dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
 
         <TextView
             android:id="@+id/viewMaterias"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="75dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
 
         <View
             android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:backgroundTint="#FF9800"
-            app:srcCompat="@drawable/agregar" />
+            android:background="?android:attr/listDivider"
+            tools:layout_conversion_absoluteHeight="1dp"
+            tools:layout_editor_absoluteY="94dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
 
     </LinearLayout>
 </LinearLayout>
