@@ -50,7 +50,7 @@ public class ListaTareasAdapter extends RecyclerView.Adapter<ListaTareasAdapter.
         public TareaViewHolder(View itemView){
             super(itemView);
 
-            viewNombre=itemView.findViewById(R.id.viewNombre);
+            viewNombre=itemView.findViewById(R.id.viewNombrePeriodo);
             viewMateria=itemView.findViewById(R.id.viewMaterias);
             viewFecha=itemView.findViewById(R.id.viewFecha);
 

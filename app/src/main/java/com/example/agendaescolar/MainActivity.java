@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         periodos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), CrearPeriodo.class);
+                Intent intent = new Intent(v.getContext(), VerPeriodos.class);
                 startActivityForResult(intent, 0);
             }
         });

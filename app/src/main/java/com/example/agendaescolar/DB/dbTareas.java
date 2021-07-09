@@ -52,7 +52,7 @@ public class dbTareas extends AgendaDB {
         ArrayList<Tareas> listaTareas = new ArrayList<>();
         Tareas tarea = null;
         Cursor cursorTareas =null;
-        cursorTareas = db.rawQuery("SELECT * FROM " + TABLE_TAREAS, null);
+        cursorTareas = db.rawQuery("SELECT * FROM " + TABLE_TAREAS + " ORDER BY id DESC", null);
 
         if(cursorTareas.moveToFirst()){
             do{

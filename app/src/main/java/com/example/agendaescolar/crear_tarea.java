@@ -55,20 +55,21 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
                 long id = dbTarea.insertarTarea(etNombre.getText().toString(), etMateria.getText().toString(), etDescripcion.getText().toString(),textViewHora.getText().toString(),textViewFecha.getText().toString());
                 if(validar())
                 {
-                Toast.makeText(crear_tarea.this,"Tarea creada correctamente" + id, Toast.LENGTH_LONG).show();
+                    Toast.makeText(crear_tarea.this,"Tarea creada correctamente" + id, Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(v.getContext(), VerTareas.class);
+                    startActivityForResult(intent, 0);
                 }
             }
         });
-/*
+
         btnCancell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), back);
-                startActivityForResult(intent, 0);
+                onBackPressed();
             }
         });
 
-*/
+
     }
 
 
