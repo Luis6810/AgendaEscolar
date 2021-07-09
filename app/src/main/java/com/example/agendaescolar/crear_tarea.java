@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -20,7 +21,8 @@ import java.util.Calendar;
 public class crear_tarea extends AppCompatActivity implements View.OnClickListener{
 
     Button btnHora, btnFecha,btnSave,btnCancell;
-    EditText editHora, editFecha, etNombre,etMateria,etDescripcion;
+    EditText etNombre,etMateria,etDescripcion;
+    TextView textViewHora, textViewFecha;
     private int dia,mes,año,hora,minutos;
 
     @Override
@@ -32,8 +34,11 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
         btnCancell=(Button) findViewById(R.id.btnCancell);
         btnFecha=(Button) findViewById(R.id.btnFecha);
         btnHora=(Button) findViewById(R.id.btnHora);
-        editFecha=(EditText) findViewById(R.id.editFecha);
-        editHora=(EditText) findViewById(R.id.editHora);
+        textViewFecha=(TextView) findViewById(R.id.textViewFecha);
+        //editFecha=(EditText) findViewById(R.id.editFecha);
+
+        textViewHora=(TextView) findViewById(R.id.textViewHora);
+        //editHora=(EditText) findViewById(R.id.editHora);
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
 
@@ -47,9 +52,11 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onClick(View v) {
                 dbTareas dbTarea = new dbTareas(crear_tarea.this);
-                long id = dbTarea.insertarTarea(etNombre.getText().toString(), etMateria.getText().toString(), etDescripcion.getText().toString(),editHora.getText().toString(),editFecha.getText().toString());
-
+                long id = dbTarea.insertarTarea(etNombre.getText().toString(), etMateria.getText().toString(), etDescripcion.getText().toString(),textViewHora.getText().toString(),textViewFecha.getText().toString());
+                if(validar())
+                {
                 Toast.makeText(crear_tarea.this,"Tarea creada correctamente" + id, Toast.LENGTH_LONG).show();
+                }
             }
         });
 /*
@@ -62,11 +69,35 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
         });
 
 */
-
-
-
     }
 
+
+    //para que ningun campo quede vacio
+    public boolean validar()
+    {
+        boolean retorno=true;
+        String c1=etNombre.getText().toString();
+        String c2=etMateria.getText().toString();
+        String c3=etDescripcion.getText().toString();
+
+        if(c1.isEmpty())
+        {
+            etNombre.setError("No puede quedar vacio");
+            retorno=false;
+        }
+        if(c2.isEmpty())
+        {
+            etMateria.setError("No puede quedar vacio");
+            retorno=false;
+        }
+        if(c3.isEmpty())
+        {
+            etDescripcion.setError("No puede quedar vacio");
+            retorno=false;
+        }
+
+        return retorno;
+    }
     @Override
     public void onClick(View v) {
         if(v==btnFecha){
@@ -78,7 +109,7 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    editFecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    textViewFecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
 
                 }
             },dia,mes,año);
@@ -92,7 +123,7 @@ public class crear_tarea extends AppCompatActivity implements View.OnClickListen
             TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    editHora.setText(hourOfDay+":"+minute);
+                    textViewHora.setText(hourOfDay+":"+minute);
                 }
             },hora,minutos,false);
             timePickerDialog.show();
