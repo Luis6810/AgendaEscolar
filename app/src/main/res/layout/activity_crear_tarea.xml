@@ -57,11 +57,9 @@
         android:textColor="#040404"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.424"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -96,20 +94,22 @@
         android:id="@+id/etMateria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:fontFamily="@font/amatica_sc_bold"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.428" />
 
     <EditText
         android:id="@+id/etDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:ems="10"
         android:fontFamily="@font/amatica_sc_bold"
         android:gravity="start|top"
@@ -117,10 +117,10 @@
         android:textColor="#050505"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.522" />
 
     <Button
         android:id="@+id/btnCancell"
@@ -193,8 +193,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHora"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.625" />
 
@@ -207,8 +206,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFecha"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.74" />
 

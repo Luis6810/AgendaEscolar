@@ -46,5 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+        Button notas = findViewById(R.id.btnNotas);
+        notas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),usuarioVoz.class);
+                startActivityForResult(intent, 0);
+            }
+
+        });
     }
 }
